@@ -1,0 +1,232 @@
+<html>
+<head>
+<title>my page</title>
+    <style>
+    
+        input{
+            padding:20px 10px;
+            margin-bottom: 5px;
+            font-size: 20px
+            
+        }
+        body{
+            background: #333
+        }
+        .main{
+            text-align: center;
+            width: 400;
+            margin: 80px auto;
+           /* padding: 30px*/
+            position: relative;
+        }
+        button{
+            padding:15px 20px;
+        
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 15px
+        }
+        
+        h1{
+         
+            text-align: center;
+            color: #eee;
+            font-size: 100px
+        }
+        
+        
+    </style>
+</head>
+<body>
+  <h1>calculator</h1> 
+ <div class="main">
+  <input type="text" id="txt"/><br>
+  
+   <button type="reset" id="reset" value="c" onclick="myset();">c</button>
+    <button value="/" id="divid" onclick="mydivid()">/</button>
+  <button value="*" id="multiple" onclick="mymultiple();">*</button>
+ <button value="-" id="sub" onclick=" mysub();" >-</button> 
+    <button value="+" id="plus" onclick="myadd();">+</button><br>
+ 
+    
+
+
+    
+    <button  id="btn1"  value="1" onclick="sayhello();">1</button>
+    <button type="button" value="2" id="btn2" onclick="mybtn2();" >2</button>
+     <button id="btn3" value="3" onclick="mybtn3();">3</button>
+       <button value="4" id="btn4" onclick="mybtn4()" style="padding: 15px 17px">4</button>
+  
+       
+ <button id="decimel" value="." onclick="mydecimel();">.</button>     
+                
+                
+   <br>
+        
+    
+     <button value="5" id="btn5" onclick="mybtn5()">5</button>
+     <button value="6" id="btn6" onclick="mybtn6()">6</button>
+   
+
+ 
+
+      
+      
+     <button value="7" id="btn7" onclick="mybtn7()">7</button>
+    <button value="8" id="btn8" onclick="mybtn8();" style="padding:15px 17px">8</button>
+   
+        <button value=")" id="cote1" onclick="mycote1();">)</button>
+        
+        
+<br>
+
+
+        <button value="9" id="btn9" onclick="mybtn9();">9</button>     
+      <button value="0" id="btn0" onclick="mybtn0();">0</button> 
+        
+     
+   
+     <button value="=" id="equal" onclick="myequal();">=</button>
+   <button value="%" id="persent" onclick="mypersent();" style="padding:15px">%</button> 
+        <button value="( " id="cote2" onclick="mycote2();">( </button>
+</div>   
+   
+
+<script>
+    function sayhello() {
+        var num1=window.btn1.value;
+       
+         window.txt.value+=num1;
+    } 
+   function mybtn2() {
+       var num2=window.btn2.value;
+       
+         window.txt.value+=num2; 
+   } 
+    function mybtn3() {
+        var num3=window.btn3.innerHTML;
+       
+         window.txt.value+=num3; 
+
+    }
+     function mybtn4() {
+        var num4=window.btn4.innerHTML;
+       
+         window.txt.value+=num4; 
+
+    }
+     function mybtn5() {
+        var num5=window.btn5.innerHTML;
+       
+         window.txt.value+=num5; 
+
+    }
+     function mybtn6() {
+        var num6=window.btn6.innerHTML;
+       
+         window.txt.value+=num6; 
+
+    }
+    function mybtn7() {
+        var num7=window.btn7.innerHTML;
+       
+         window.txt.value+=num7; 
+
+        
+    }
+    function mybtn8() {
+        var num8=window.btn8.innerHTML;
+       
+         window.txt.value+=num8; 
+
+    }
+    function mybtn9() {
+        var num9=window.btn9.innerHTML;
+       
+         window.txt.value+=num9; 
+
+    } 
+    function mybtn0() {
+        var num0=window.btn0.innerHTML;
+       
+         window.txt.value+=num0; 
+
+    }
+      function mydecimel() {
+        var mydecimel=window.decimel.innerHTML;
+       
+         window.txt.value+=mydecimel; 
+
+    }
+    
+     function myset() {
+        
+       
+         window.txt.value=""; 
+
+    }
+     function myadd() {
+        var add=window.plus.innerHTML;
+       
+         window.txt.value+=add; 
+
+    }
+     function myequal() {
+      
+       var input= window.txt.value
+         window.txt.value=eval(input); 
+
+    }
+    function mysub() {
+    var mysub=window.sub.innerHTML;
+       
+         window.txt.value+= mysub; 
+
+    }
+     function mydivid() {
+    var divid=window.divid.innerHTML;
+       
+         window.txt.value+=divid; 
+
+    }
+     function mymultiple() {
+    var mymultiple=window.multiple.innerHTML;
+       
+         window.txt.value+=mymultiple; 
+
+    } 
+  
+  function mypersent() {
+   
+     var mypersent=window.persent.value;
+              
+ window.txt.value+=mypersent; 
+
+ } 
+ function mycote1() {
+   
+     var mycote1=window.cote1.value;
+              
+ window.txt.value+=mycote1; 
+
+ } 
+    function mycote2() {
+   
+     var mycote2=window.cote2.value;
+              
+ window.txt.value+=mycote2; 
+
+ } 
+ 
+ function myback() {
+   
+     var input=input.pop();
+              
+ window.txt.value=input; 
+
+ } 
+    
+    
+</script>
+</body>
+</html>
