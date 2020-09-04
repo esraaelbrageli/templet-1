@@ -2,49 +2,68 @@
 <head>
 <title>my page</title>
     <style>
-    
+        *{
+            box-sizing: border-box
+        }
         input{
-            padding:20px 10px;
+           width:320;
+            height: 90;
             margin-bottom: 5px;
-            font-size: 20px
+            font-size: 30px;
+       background: #eee;
+            font-weight: bold;
             
         }
         body{
-            background: #333
+            background: #eee
         }
         .main{
             text-align: center;
             width: 400;
+            height: 400;
             margin: 80px auto;
            /* padding: 30px*/
             position: relative;
         }
         button{
-            padding:15px 20px;
-        
+           width: 60px;
+            height: 60px;
             margin-bottom: 5px;
-            font-weight: bold;
-            font-size: 15px
+         /* text-align: center;*/
+            font-size: 22px;
+           background: #eee
         }
         
+       
+        
+        button:hover,button:active{
+            font-weight: bold;
+           /* font-size: 25;*/
+           /* padding: 10px;*/
+            background: rgb(119, 119, 119,.5)
+        }
+        
+       
+      
         h1{
          
             text-align: center;
-            color: #eee;
+            color: black;
             font-size: 100px
         }
-        
+    
         
     </style>
 </head>
 <body>
+    <audio id="sound" src="#"></audio>
   <h1>calculator</h1> 
  <div class="main">
   <input type="text" id="txt"/><br>
   
    <button type="reset" id="reset" value="c" onclick="myset();">c</button>
-    <button value="/" id="divid" onclick="mydivid()">/</button>
-  <button value="*" id="multiple" onclick="mymultiple();">*</button>
+    <button value="/" id="divid" onclick="mydivid()" onmousedown="window.sound.src=' صوت الكتابة علي الكيبورد.mb3'" onmouseup="window.sound.src=""">/</button>
+  <button value="*" id="multiple" onclick="mymultiple();" >*</button>
  <button value="-" id="sub" onclick=" mysub();" >-</button> 
     <button value="+" id="plus" onclick="myadd();">+</button><br>
  
@@ -102,6 +121,7 @@
        var num2=window.btn2.value;
        
          window.txt.value+=num2; 
+       var input=window.txt.value;
    } 
     function mybtn3() {
         var num3=window.btn3.innerHTML;
@@ -175,6 +195,10 @@
       
        var input= window.txt.value
          window.txt.value=eval(input); 
+         if (input=Infinity){
+             window.txt.value="invalid operation";
+ 
+         }
 
     }
     function mysub() {
@@ -184,9 +208,13 @@
 
     }
      function mydivid() {
+ 
     var divid=window.divid.innerHTML;
        
          window.txt.value+=divid; 
+     
+        
+       
 
     }
      function mymultiple() {
