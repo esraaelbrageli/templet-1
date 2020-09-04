@@ -56,13 +56,13 @@
     </style>
 </head>
 <body>
-    <audio id="sound" src="#"></audio>
+   
   <h1>calculator</h1> 
  <div class="main">
   <input type="text" id="txt"/><br>
   
    <button type="reset" id="reset" value="c" onclick="myset();">c</button>
-    <button value="/" id="divid" onclick="mydivid()" onmousedown="window.sound.src=' صوت الكتابة علي الكيبورد.mb3'" onmouseup="window.sound.src=""">/</button>
+    <button value="/" id="divid" onclick="mydivid()">/</button>
   <button value="*" id="multiple" onclick="mymultiple();" >*</button>
  <button value="-" id="sub" onclick=" mysub();" >-</button> 
     <button value="+" id="plus" onclick="myadd();">+</button><br>
@@ -196,7 +196,7 @@
        var input= window.txt.value
          window.txt.value=eval(input); 
          if (input=Infinity){
-             window.txt.value="invalid operation";
+             window.txt.value="Invalid operation";
  
          }
 
